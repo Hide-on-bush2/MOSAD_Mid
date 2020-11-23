@@ -1,0 +1,5 @@
+${PODS_ROOT}/Target Support Files/Pods-IOS_mid/Pods-IOS_mid-resources.sh
+${PODS_CONFIGURATION_BUILD_DIR}/DLPhotoPicker/DLPhotoPicker.bundle
+${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle
+${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle
+${PODS_CONFIGURATION_BUILD_DIR}/TOCropViewController/TOCropViewControllerBundle.bundle

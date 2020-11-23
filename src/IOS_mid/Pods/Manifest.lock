@@ -1,0 +1,36 @@
+PODS:
+  - DLPhotoPicker (2.1.2):
+    - PureLayout (~> 3.0.0)
+    - SVProgressHUD
+    - TOCropViewController
+  - Masonry (1.1.0)
+  - MJRefresh (3.5.0)
+  - PureLayout (3.0.2)
+  - SVProgressHUD (2.2.5)
+  - TOCropViewController (2.5.5)
+
+DEPENDENCIES:
+  - DLPhotoPicker
+  - Masonry
+  - MJRefresh
+
+SPEC REPOS:
+  trunk:
+    - DLPhotoPicker
+    - Masonry
+    - MJRefresh
+    - PureLayout
+    - SVProgressHUD
+    - TOCropViewController
+
+SPEC CHECKSUMS:
+  DLPhotoPicker: 033454cbfed2b86a1d68377a21d886782817f852
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
+  PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  TOCropViewController: da59f531f8ac8a94ef6d6c0fc34009350f9e8bfe
+
+PODFILE CHECKSUM: 0d0f3cf639e3801f9500bb5c229ac5facbdaab29
+
+COCOAPODS: 1.10.0

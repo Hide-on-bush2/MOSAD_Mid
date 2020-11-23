@@ -1,0 +1,5 @@
+target "IOS_mid" do
+	pod "Masonry"
+  	pod 'DLPhotoPicker'
+	pod "MJRefresh"
+end
