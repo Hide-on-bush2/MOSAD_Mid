@@ -1,5 +1,28 @@
-target "IOS_mid" do
-	pod "Masonry"
-  	pod 'DLPhotoPicker'
-	pod "MJRefresh"
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'ios_mid' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for ios_mid
+  pod 'Masonry'
+  pod 'AFNetworking'
+  pod 'DLPhotoPicker'
+  pod 'MJRefresh'
+  pod "SDWebImage"
+  pod 'XHImageViewer'
+  pod 'YYModel'
+  pod 'MBProgressHUD', '~> 1.2.0'
+
+
+  target 'ios_midTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'ios_midUITests' do
+    # Pods for testing
+  end
+
 end

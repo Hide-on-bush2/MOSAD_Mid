@@ -1,18 +1,17 @@
 //
-//  IOS_midUITests.m
-//  IOS_midUITests
+//  ios_midUITests.m
+//  ios_midUITests
 //
-//  Created by 车春江 on 2020/11/19.
-//  Copyright © 2020 车春江. All rights reserved.
+//  Created by Khynnn on 2020/11/27.
 //
 
 #import <XCTest/XCTest.h>
 
-@interface IOS_midUITests : XCTestCase
+@interface ios_midUITests : XCTestCase
 
 @end
 
-@implementation IOS_midUITests
+@implementation ios_midUITests
 
 - (void)setUp {
     // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -39,7 +38,7 @@
 - (void)testLaunchPerformance {
     if (@available(macOS 10.15, iOS 13.0, tvOS 13.0, *)) {
         // This measures how long it takes to launch your application.
-        [self measureWithMetrics:@[XCTOSSignpostMetric.applicationLaunchMetric] block:^{
+        [self measureWithMetrics:@[[[XCTApplicationLaunchMetric alloc] init]] block:^{
             [[[XCUIApplication alloc] init] launch];
         }];
     }

@@ -1,18 +1,17 @@
 //
-//  IOS_midTests.m
-//  IOS_midTests
+//  ios_midTests.m
+//  ios_midTests
 //
-//  Created by 车春江 on 2020/11/19.
-//  Copyright © 2020 车春江. All rights reserved.
+//  Created by Khynnn on 2020/11/27.
 //
 
 #import <XCTest/XCTest.h>
 
-@interface IOS_midTests : XCTestCase
+@interface ios_midTests : XCTestCase
 
 @end
 
-@implementation IOS_midTests
+@implementation ios_midTests
 
 - (void)setUp {
     // Put setup code here. This method is called before the invocation of each test method in the class.

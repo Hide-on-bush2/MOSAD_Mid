@@ -1,4 +1,12 @@
+//
+//  SceneDelegate.m
+//  ios_mid
+//
+//  Created by Khynnn on 2020/11/27.
+//
+
 #import "SceneDelegate.h"
+#import "LoginViewController.h"
 
 @interface SceneDelegate ()
 
@@ -11,6 +19,18 @@
     // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
     // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
     // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+    
+    UIWindowScene *windowScene = (UIWindowScene *)scene;
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+     self.window = [[UIWindow alloc] initWithWindowScene:windowScene];
+     [self.window setWindowScene:windowScene];
+     [self.window setBackgroundColor:[UIColor whiteColor]];
+    
+    LoginViewController* login = [[LoginViewController alloc] init];
+    UINavigationController* loginNC = [[UINavigationController alloc] initWithRootViewController:login];
+    [self.window setRootViewController:loginNC];
+     
+    [self.window makeKeyAndVisible];
 }
 
 
@@ -18,7 +38,7 @@
     // Called as the scene is being released by the system.
     // This occurs shortly after the scene enters the background, or when its session is discarded.
     // Release any resources associated with this scene that can be re-created the next time the scene connects.
-    // The scene may re-connect later, as its session was not neccessarily discarded (see `application:didDiscardSceneSessions` instead).
+    // The scene may re-connect later, as its session was not necessarily discarded (see `application:didDiscardSceneSessions` instead).
 }
 
 
