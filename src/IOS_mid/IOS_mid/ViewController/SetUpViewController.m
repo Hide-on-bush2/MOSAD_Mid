@@ -7,6 +7,8 @@
 #import <Foundation/Foundation.h>
 #import "SetUpViewController.h"
 #import "UserInfo.h"
+#import "MessageData.h"
+
 #import "Masonry.h"
 #import "AFNetworking.h"
 
@@ -273,7 +275,25 @@
         make.height.mas_equalTo(40);
         make.width.mas_equalTo(40);
     }];
-    
+
+    if(_unread == nil){
+        _unread = [[UILabel alloc] init];
+        _unread.textColor = [UIColor whiteColor];
+        _unread.font = [UIFont systemFontOfSize:12];
+        _unread.textAlignment = NSTextAlignmentCenter;
+        _unread.backgroundColor = [UIColor redColor];
+        _unread.layer.masksToBounds = YES;
+        _unread.layer.cornerRadius = 10;
+        
+        [viewMeg addSubview:_unread];
+    }
+    [_unread mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(imageMeg.mas_right);
+        make.top.equalTo(viewMeg).with.offset(10);
+        
+        make.height.mas_equalTo(20);
+        make.width.mas_equalTo(20);
+    }];
     
 #pragma mark - storage
 //个人存储额度
@@ -424,7 +444,7 @@
         
         make.height.mas_equalTo(60);
     }];
-    //manage.hidden = YES;
+    manage.hidden = YES;
     NSString* class = [[UserInfo singleInstance].info objectForKey:@"Class"];
     if([class isEqual:@"5"] || [class isEqual:@"6"]){
         manage.hidden = NO;
@@ -458,6 +478,21 @@
     self.view.backgroundColor = [UserInfo singleInstance].lightColor;
     
     [self showUserInfo];
+    
+    [[MessageData singleInstance] getUnreadCount];
+    //
+    NSString *res = @"1";
+    //NSNumber *res = [NSNumber numberWithInt:1];
+    NSLog(@"res %@", res);
+    if([res isEqual:0] || [res isEqual:nil])
+        _unread.hidden = YES;
+    else{
+        _unread.hidden = NO;
+        //_unread.text = [res stringValue];
+        _unread.text = res;
+        res = [MessageData singleInstance].result;
+    }
+    //_unread.text = @"1";
 }
 
 - (void)refresh{

@@ -62,7 +62,7 @@ NSString *cellIdentifier = @"CommentCell";
     self.like_num = 0;
     
     self.headView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 0, 0)];
-    self.headView.image = [UIImage imageNamed:@"faker"];
+    self.headView.image = [UIImage imageNamed:@"people"];
 
     self.username = [[UILabel alloc] init];
     self.username.text = @"昵称";

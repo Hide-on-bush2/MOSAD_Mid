@@ -12,9 +12,14 @@
 @property(nonatomic, strong)NSMutableArray *system;
 @property(nonatomic, strong)NSMutableArray *follow;
 
+@property(nonatomic, strong) NSString *result;
+
 +(instancetype)singleInstance;
 -(void)getMeg;
 
+-(void)getUnreadCount;
+
 -(void)readAction:(NSString *)ID;
 -(void)deleteAction:(NSString *)ID;
+
 @end

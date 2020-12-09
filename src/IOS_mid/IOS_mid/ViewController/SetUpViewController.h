@@ -18,6 +18,8 @@
 @property (nonatomic,strong) UILabel *bio;
 @property (nonatomic, strong) UIImageView *head;
 
+@property (nonatomic, strong)UILabel *unread;
+
 @end
 
 #endif /* SetUpViewController_h */
